@@ -1,0 +1,81 @@
+body {margin:0px;font-size:14px;background:#FFFFFF;}
+div.padding {padding:4px;}
+form {margin:-4px;}
+table.color {width:100%;border-top:solid 1px #6699FF;border-bottom:solid 1px #6699FF;}
+table.color tr.title td{background-color:#DDDDFF; color:#FFFFFF; font-weight:bold;}
+table.color tr td{background-color: #FFFFFF;}
+hr{color:#AAAAFF;border:dotted 1px #AAAAFF;}
+a, a:link, a:visited {text-decoration:none;color:#3333cc;}
+a:hover {text-decoration:underline;}
+.p128 {display:inline-block;width:128px;}
+.p176 {display:inline-block;width:176px;}
+.gin {width:320px;border:solid 1px #AAAAFF;}
+.gin:focus {background:#EEEEFF;}
+.garea {width:600px;height:240px;border:solid 1px #AAAAFF;background-color:transparent;}
+.garea:focus {background:#EEEEFF;}
+.gbtn{background:#EEEEFF;border:groove 2px #AAAAFF;}
+.gbtn:hover {background:#FFFFFF;}
+.gbtn:active {background:#CCCCFF;}
+.error_message {padding:4px;color:#FF0000;}
+.del_button:link, del_button:visited {text-decoration:none;color:#FF0000;}
+.del_button:hover {text-decoration:line-through;}
+.message {padding:8px; margin-bottom:9px;border:solid 1px #AAAAAA;white-space:normal;overflow:auto;word-wrap:break-word;}
+.message_time{padding:8px; margin:-8px;margin-bottom:7px;overflow:auto;background:#EEEEEE url('../image/sbk.png');border-bottom:solid 1px #AAAAAA;}
+.comment_quote{padding:4px;border:dashed 1px #AAAAFF}
+.gallery_block{margin-bottom:9px;}
+.gallery_title{padding:8px;font-weight:bold;background:url('../image/gbk.png') no-repeat;}
+.gallery_item{float:left;margin-top:9px;margin-right:9px;
+ width:240px;height:135px;border:double 3px #ccc;}
+.gallery_img{width:240px;height:135px;}
+#main {padding:4px; margin:0px 0px;border:solid 1px #FFFFFF;background:white;}
+#header {margin:0px 0px;margin-top:-4px;}
+#logo {margin-bottom:0px;padding:0px;padding-left:16px;}
+#logo a:link, #logo a:hover, #logo a:visited {background-color:transparent;text-decoration:none;}
+#banner {margin-top:-36px;margin-bottom:12px;padding:4px;padding-left:210px;color:#555;}
+#navigation {
+    	float:none;
+	margin:0px -5px;
+	padding:4px;
+	font-family:"Arial";font-size:12px;
+	font-weight:bold;
+	border:solid 1px #1111FF;
+	border-left:none;
+	border-right:none;
+	background:#EEEEFF url('../image/nbk.png');
+}
+#navigation ul {margin-top:0px;padding:4px;list-style-type:none;}
+#navigation li {float:left;vertical-align:middle;}
+#navigation a, #navigation a:visited, #navigation a:link {margin:0px;padding:4px 8px;color:#000000;text-decoration:none;}
+#navigation a:hover {color:#FF6600;}
+#vector {margin-left:0px;margin-right:0px;padding:0px;width:100%;}
+#admin_contents {padding:4px;margin-top:9px;width:976px;}
+#contents {float:left;padding:4px; margin-top:9px;width:74%;}
+#contents .previous {float:left;font-weight:bold;margin-top:-4px;}
+#contents .next {float:right;font-weight:bold;margin-top:-4px;}
+#sidebar {float:left;margin-top:13px;width:25%;}
+#sidebar .block {margin-bottom:7px;border:solid 1px #AAAAFF;}
+#sidebar .title {padding:8px;background:#EEEEFF url('../image/sbk.png');border-bottom:solid 1px #AAAAFF;}
+#sidebar .item {padding:4px;}
+#about {padding:0px;border:solid 1px #AAAAFF;}
+#about .header {padding:8px;background:#EEEEFF;}
+#about .title {padding:4px;display:inline-block;padding-left:14px;width:240px;}
+#about .normal {padding:8px 0px;}
+#footer {float:left;
+	padding:4px;
+	height:50px;
+	width:100%;
+	margin:10px -4px;margin-bottom:-4px;
+	text-align:right;font-size:12px;
+	border-top:dashed 1px #AAAAFF;
+}
+#footer a, #footer a:link, #footer a:visited {text-decoration:none;color:#3333cc;}
+#footer a:hover {text-decoration:underline;}
+#admin {}
+#admin .menu{font-size:14px;}
+#admin .menu .padding {margin-right:9px;margin-bottom:7px;border:solid 1px #FFFFFF;border-left:solid 9px #EEEEFF;border-right:none;}
+#admin .menu .padding:hover {margin-right:9px;margin-bottom:7px;border:solid 1px #AAAAFF;border-left:solid 9px #AAAAFF;border-right:none;}
+#admin .menu a, #admin .menu a:link, #admin .item a:visited {text-decoration:none;color:#000000;}
+#admin .menu a:hover {color:#FF6600;background-color:#FFFFFF;}
+.admin_header {font-weight:bold;border-bottom:dashed 1px #AAAAFF;}
+#login {padding:8px;border:solid 1px #AAAAFF;}
+#login .header {padding:8px;margin:-4px;margin-top:-8px;font-size:14px;background:#EEEEFF;border-bottom:solid 1px #AAAAFF;}
