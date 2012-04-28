@@ -29,7 +29,7 @@ a:hover {text-decoration:underline;}
 .gallery_img{width:240px;height:135px;}
 #main {padding:4px; margin:0px 0px;border:solid 1px #FFFFFF;background:white;}
 #header {margin:0px 0px;margin-top:-4px;}
-#logo {margin-bottom:0px;padding:0px;padding-left:16px;}
+#logo {height:100px;margin-bottom:0px;padding:0px;padding-left:16px;}
 #logo a:link, #logo a:hover, #logo a:visited {background-color:transparent;text-decoration:none;}
 #banner {margin-top:-36px;margin-bottom:12px;padding:4px;padding-left:210px;color:#555;}
 #navigation {
@@ -52,10 +52,10 @@ a:hover {text-decoration:underline;}
 #contents {float:left;padding:4px; margin-top:9px;width:74%;}
 #contents .previous {float:left;font-weight:bold;margin-top:-4px;}
 #contents .next {float:right;font-weight:bold;margin-top:-4px;}
-#sidebar {float:left;margin-top:13px;width:25%;}
-#sidebar .block {margin-bottom:7px;border:solid 1px #AAAAFF;}
-#sidebar .title {padding:8px;background:#EEEEFF url('../image/sbk.png');border-bottom:solid 1px #AAAAFF;}
-#sidebar .item {padding:4px;}
+#side_bar {float:left;margin-top:13px;width:25%;}
+#side_bar .block {margin-bottom:7px;border:solid 1px #AAAAFF;}
+#side_bar .title {padding:8px;background:#EEEEFF url('../image/sbk.png');border-bottom:solid 1px #AAAAFF;}
+#side_bar .item {padding:4px;}
 #about {padding:0px;border:solid 1px #AAAAFF;}
 #about .header {padding:8px;background:#EEEEFF;}
 #about .title {padding:4px;display:inline-block;padding-left:14px;width:240px;}
