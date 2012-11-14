@@ -16,9 +16,10 @@ Write a new message
 </div>
 <?PHP
     if($_GET['error'])
-    echo "<div class='error_message'>Operation failed! Check your inputs.".strerror($_GET['error'])."</div>";
+    echo "<div class='error_message'>Operation failed! Check your inputs. ".strerror($_GET['error'])."</div>";
     ?>
 <div class='padding'>
+<input name="nickname" style="display:none" value="<?PHP echo $_COOKIE['AE01'];?>" />
 <textarea class="garea" name="message_content">
 </textarea>
 </div>

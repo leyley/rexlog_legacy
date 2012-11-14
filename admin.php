@@ -2,7 +2,7 @@
 // login check
 require_once("include/macro_dir.php");
 require_once("include/user.php");
-if(!log_check())
+if(!log_check() || user_level()<0)
 {
     echo "<script language='JavaScript'>location.href='?path=login';</script>";
     exit();
@@ -58,13 +58,14 @@ which used to deal with highlight of code in <textarea>.
 		<tr>
 			<!--left cols-->
 			<td width="25%" valign="top" class="menu">
-				<div class="padding"><a href="#" onclick="show('setting')">Setting</a></div>
+				<?PHP if(user_level()<=0){?><div class="padding"><a href="#" onclick="show('setting')">Setting</a></div><?PHP } ?>
 				<div class="padding"><a href="#" onclick="show('user')">User</a></div>
-				<div class="padding"><a href="#" onclick="show('link')">Link</a></div>
-				<div class="padding"><a href="#" onclick="show('side_bar')">Sidebar</a></div>
-				<div class="padding"><a href="#" onclick="show('page')">Page</a></div>
-				<div class="padding"><a href="#" onclick="show('message')">Message</a></div>
+				<?PHP if(user_level()<=1){?><div class="padding"><a href="#" onclick="show('link')">Link</a></div><?PHP } ?>
+				<?PHP if(user_level()<=1){?><div class="padding"><a href="#" onclick="show('side_bar')">Sidebar</a></div><?PHP } ?>
+				<?PHP if(user_level()<=1){?><div class="padding"><a href="#" onclick="show('page')">Page</a></div><?PHP } ?>
+				<?PHP if(user_level()<=2){?><div class="padding"><a href="#" onclick="show('message')">Message</a></div><?PHP } ?>
 				<!--plugin config-->
+				<?PHP if(user_level()<=1){?>
 				<?php
 					if(glob($PLUGIN_DIR.'/*/')!=null)
 					{
@@ -90,6 +91,7 @@ which used to deal with highlight of code in <textarea>.
 						}
 					}
 				?>
+				<?PHP } ?>
 				<!--logout-->
 				<div  class="padding"><a href="#" onclick="logout()">Sign out</a></div>
 			</td>

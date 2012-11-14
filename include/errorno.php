@@ -17,6 +17,8 @@ define("ER_LOGIN",-5);
 define("ER_NOTLOG",-6);
 define("ER_NOFILE",-7);
 define("ER_HASFILE",-8);
+define("ER_DNICK",-9);
+define("ER_DUSER",-10);
 
 $strer[ER_IO]="I/O Error, check permission first.";
 $strer[ER_STRUCT]="Spoiled structure, the program might be damaged.";
@@ -26,6 +28,8 @@ $strer[ER_LOGIN]="Login failed, wrong username or password.";
 $strer[ER_NOTLOG]="To visit this page, you need to login.";
 $strer[ER_NOFILE]="The file is not exist.";
 $strer[ER_HASFILE]="The file is alread exists.";
+$strer[ER_DNICK]="Duplicate nickname.";
+$strer[ER_DUSER]="Duplicate username.";
 
 /*
 * Return the errorno;

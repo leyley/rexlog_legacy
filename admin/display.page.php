@@ -31,7 +31,7 @@ global $DATA_PAGE_DIR;
 	<?php
 		//error output
     	if($_GET['error'])
-    	echo "<div class='error_message'>Operation failed! Check your inputs.".strerror($_GET['error'])."</div>";
+    	echo "<div class='error_message'>Operation failed! Check your inputs. ".strerror($_GET['error'])."</div>";
 	?>
 
 	<!-- part 1: add page-->

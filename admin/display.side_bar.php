@@ -10,7 +10,7 @@ if(!defined("ADMIN_IN"))
 <div id="side_bar" style="display:none">
 <?PHP
     if($_GET['error'])
-    echo "<div class='error_message'>Operation failed! Check your inputs.".strerror($_GET['error'])."</div>";
+    echo "<div class='error_message'>Operation failed! Check your inputs. ".strerror($_GET['error'])."</div>";
 ?>
 <div class="admin_header">
 Sidebar(raw html)

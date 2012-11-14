@@ -22,7 +22,7 @@ require_once(dirname(__FILE__)."/../include/message.php");
 				}
 				else
 				{
-					$content = $_POST['message_content'];
+					$content = $_POST['nickname'].">>>".$_POST['message_content'];
 				}
 				if(!message_new($content))
 					$error=geterror();

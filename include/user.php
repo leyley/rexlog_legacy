@@ -4,68 +4,80 @@
 */
 require_once("errorno.php");
 
-define("USER_DATA_FILE",dirname(__FILE__)."/../data/config.admin.php");
+define("USER_DATA_DIR",dirname(__FILE__)."/../data/users");
 
-function user_login($admin_username_in,$admin_password_in)
+/* New user module; */
+function user_login($username0,$password0)
 {
-    global $errorno;
-    
-    if(!$admin_username_in || !$admin_password_in)
-    {
-        $errorno=ER_IN;
-        return FALSE;
-    }
-    
-    if(!file_exists(USER_DATA_FILE))
-    {
-        $errorno=ER_STRUCT;
-        return FALSE;
-    }
-    
-    include(USER_DATA_FILE);
-    
-    if($admin_username_in!=$admin_username || $admin_password_in!=$admin_password)
-    {
-        $errorno=ER_LOGIN;
-        return FALSE;
-    }
-    
-    /*
-    * AB01 - username;
-    * AC01 - password;
-    */
-    setcookie("AB01",$admin_username);
-    setcookie("AC01",$admin_password);
-    
-    return TRUE;
+	/*-----------------------------------------------------
+	 * Cookies;
+	 * AB01 - username;
+	 * AC01 - password;
+	 * AD01 - user level(verify when switching responsibilities);
+	 * AE01 - nickname;
+ 	 *---------------------------------------------------*/
+	global $errorno;
+	if(!$username0 || !$password0)
+	{
+		$errorno=ER_IN;
+		return FALSE;
+	}
+	$userfile=USER_DATA_DIR."/$username0.php";
+	if(!file_exists($userfile))
+	{
+		$errorno=ER_LOGIN;
+		return FALSE;
+	}
+	include($userfile);
+	if($username0!=$user_username || $password0!=$user_password)
+	{
+		$errorno=ER_LOGIN;
+		return FALSE;
+	}
+
+	setcookie("AB01",$user_username);
+	setcookie("AC01",$user_password);
+	setcookie("AD01",$user_level);
+	setcookie("AE01",$user_nick);
+
+	return TRUE;
 }
 
 function user_logout()
 {
     setcookie("AB01","");
     setcookie("AC01","");
-    
+    setcookie("AD01","");
+    setcookie("AE01","");
     return TRUE;
 }
 
 function log_check()
 {
-    global $errorno;
-    
-    if(!file_exists(USER_DATA_FILE))
-    {
+	global $errorno;   
+	$userfile=USER_DATA_DIR."/".$_COOKIE['AB01'].".php";
+	if(!file_exists($userfile))
+	{
         $errorno=ER_STRUCT;
         return FALSE;
-    }
-    
-    include(USER_DATA_FILE);
-    
-    if(!$_COOKIE['AB01'] || !$_COOKIE['AC01'] || $_COOKIE['AB01']!=$admin_username || $_COOKIE['AC01']!=$admin_password)
-    {
+	}
+	include($userfile);
+	if(!$_COOKIE['AB01'] || !$_COOKIE['AC01'] || $_COOKIE['AB01']!=$user_username || $_COOKIE['AC01']!=$user_password || $_COOKIE['AD01']!=$user_level)
+	{
         $errorno=ER_NOTLOG;
         return FALSE;
-    }
-    
-    return TRUE;
+	}
+   return TRUE;
+}
+
+function user_level()
+{
+	if(!$_COOKIE['AB01'])
+		return -2;
+	$userfile=USER_DATA_DIR."/".$_COOKIE['AB01'].".php";
+	if(!file_exists($userfile))
+		return -2;
+	include($userfile);
+		return $user_level;
 }
 ?>
