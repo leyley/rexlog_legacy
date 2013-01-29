@@ -45,7 +45,7 @@ switch($_POST['action'])
 					echo "<div class='comment_item'>
 					<div class='padding'>#$floor
 					";
-					if(user_level()<=1 && user_level()>=0)
+					if(@log_check())
 					{
 						echo "<a href='#' onclick='comment_del(\"".$arycmt[$i]['time']."\")'>(X)</a> ";
 					}

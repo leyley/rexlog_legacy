@@ -1,6 +1,7 @@
 <div class="message">
 	<div class="message_time">
-		Homepage builder for developers
+		#Rexlog
 	</div>
 		Hello Rexlog!
+		The homepage builder for developers
 </div>

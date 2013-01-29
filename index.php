@@ -81,7 +81,7 @@ $subtitle=$_GET['path']?$_GET['path']:"home";
 	<!--footer-->
 	<div id="footer">
 		Powered By <a href="http://www.rexlog.co.cc" target="_blank">Rexlog.HomePage</a>
-		Version:1.5.10 2010 - 2012 Lei Peng, All Rights Reserved |
+		Version:1.5.12 2010 - 2012 Lei Peng, All Rights Reserved |
 		<a href="?path=admin">CPanel</a>
 	</div>
 </div>

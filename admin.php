@@ -57,7 +57,7 @@ which used to deal with highlight of code in <textarea>.
 	<table width="100%" border="0">
 		<tr>
 			<!--left cols-->
-			<td width="25%" valign="top" class="menu">
+			<td width="16%" valign="top" class="menu">
 				<?PHP if(user_level()<=0){?><div class="padding"><a href="#" onclick="show('setting')">Setting</a></div><?PHP } ?>
 				<div class="padding"><a href="#" onclick="show('user')">User</a></div>
 				<?PHP if(user_level()<=1){?><div class="padding"><a href="#" onclick="show('link')">Link</a></div><?PHP } ?>

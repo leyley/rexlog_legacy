@@ -40,11 +40,20 @@ No attachment has been uploaded.
     }
     else
     {
+        echo "<table cellpadding='0' cellspacing='0' width='100%'>";
         for($i=0;$i<count($aryatt);$i++)
         {
 ?>
-<div><a href="#" onclick="attachment_del('<?PHP echo $aryatt[$i]; ?>')">(X)</a>|<a href="#" onclick="attachment_rename('<?PHP echo $aryatt[$i]; ?>')">(R)</a>|<?PHP echo $aryatt[$i]; ?></div>
+<tr class="tr_header">
+<td>Delete</td><td>Rename</td><td>File Name</td>
+</tr>
+<tr class="tr_cell">
+<td><a href="#" onclick="attachment_del('<?PHP echo $aryatt[$i]; ?>')">(X)</a></td>
+<td><a href="#" onclick="attachment_rename('<?PHP echo $aryatt[$i]; ?>')">(R)</a></td>
+<td><a href="/data/attachment/<?PHP echo $aryatt[$i]; ?>"><?PHP echo $aryatt[$i]; ?></a></td>
+</tr>
 <?PHP
+		echo "</table>";
         }
     }
 ?>
