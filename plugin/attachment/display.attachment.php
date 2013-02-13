@@ -40,10 +40,10 @@ No attachment has been uploaded.
     }
     else
     {
-        echo "<table cellpadding='0' cellspacing='0' width='100%'>";
-        <tr class="tr_header">
-	<td>Delete</td><td>Rename</td><td>File Name</td>
-	</tr>
+        echo "<table cellpadding='0' cellspacing='0' width='100%'>\n";
+        echo "<tr class='tr_header'>\n";
+	echo "<td>Delete</td><td>Rename</td><td>File Name</td>\n";
+	echo "</tr>\n";
         for($i=0;$i<count($aryatt);$i++)
         {
 ?>
