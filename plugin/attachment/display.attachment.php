@@ -53,8 +53,8 @@ No attachment has been uploaded.
 <td><a href="/data/attachment/<?PHP echo $aryatt[$i]; ?>"><?PHP echo $aryatt[$i]; ?></a></td>
 </tr>
 <?PHP
-		echo "</table>";
-        }
+	 }
+	 echo "</table>";
     }
 ?>
 </div>
