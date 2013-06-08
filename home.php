@@ -1,4 +1,4 @@
-<div>
+<div id="description">
 <p align="center"><b>Rexlog - A lightweight homepage solution. To build your site easily.</b></p>
 <p align="center">Rexlog is an opensource homepage builder for developers to setup their site quickly, it is:</P>
 <p>

@@ -1,5 +1,5 @@
-<div class="message">
-	<div class="message_time">
+<div class="sidebar">
+	<div class="sidebar_title">
 		#Rexlog
 	</div>
 		Hello Rexlog!
